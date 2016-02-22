@@ -26,4 +26,4 @@ atmega328pb.upload.speed=57600
 atmega328pb.build.mcu=atmega328pb
 atmega328pb.build.board=AVR_UNO
 atmega328pb.build.core=arduino:arduino
-atmega328pb.build.variant=arduino:standard
+atmega328pb.build.variant=standard

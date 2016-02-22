@@ -25,14 +25,22 @@
 
 #include <avr/pgmspace.h>
 
-#define NUM_DIGITAL_PINS            20
-#define NUM_ANALOG_INPUTS           6
-#define analogInputToDigitalPin(p)  ((p < 6) ? (p) + 14 : -1)
-
-#if defined(__AVR_ATmega8__)
-#define digitalPinHasPWM(p)         ((p) == 9 || (p) == 10 || (p) == 11)
+#if defined(__AVR_ATmega328PB__)
+# define NUM_DIGITAL_PINS           24
+# define NUM_ANALOG_INPUTS          8
+# define analogInputToDigitalPin(p) ((p < 8) ? (p) + 14 : -1)
 #else
-#define digitalPinHasPWM(p)         ((p) == 3 || (p) == 5 || (p) == 6 || (p) == 9 || (p) == 10 || (p) == 11)
+# define NUM_DIGITAL_PINS           20
+# define NUM_ANALOG_INPUTS          6
+# define analogInputToDigitalPin(p) ((p < 6) ? (p) + 14 : -1)
+#endif
+
+#if defined(__AVR_ATmega328PB__)
+# define digitalPinHasPWM(p)        ((p) == 0 || (p) == 1 || (p) == 2 || (p) == 3 || (p) == 5 || (p) == 6 || (p) == 9 || (p) == 10 || (p) == 11)
+#elif defined(__AVR_ATmega8__)
+# define digitalPinHasPWM(p)        ((p) == 9 || (p) == 10 || (p) == 11)
+#else
+# define digitalPinHasPWM(p)        ((p) == 3 || (p) == 5 || (p) == 6 || (p) == 9 || (p) == 10 || (p) == 11)
 #endif
 
 static const uint8_t SS   = 10;
@@ -42,6 +50,17 @@ static const uint8_t SCK  = 13;
 
 static const uint8_t SDA = 18;
 static const uint8_t SCL = 19;
+
+#if defined(__AVR_ATmega328PB__)
+static const uint8_t SS1   = 10;
+static const uint8_t MOSI1 = 11;
+static const uint8_t MISO1 = 12;
+static const uint8_t SCK1  = 13;
+
+static const uint8_t SDA1 = 18;
+static const uint8_t SCL1 = 19;
+#endif
+
 #define LED_BUILTIN 13
 
 static const uint8_t A0 = 14;
@@ -62,46 +81,6 @@ static const uint8_t A7 = 21;
 
 #ifdef ARDUINO_MAIN
 
-// On the Arduino board, digital pins are also used
-// for the analog output (software PWM).  Analog input
-// pins are a separate set.
-
-// ATMEL ATMEGA8 & 168 / ARDUINO
-//
-//                  +-\/-+
-//            PC6  1|    |28  PC5 (AI 5)
-//      (D 0) PD0  2|    |27  PC4 (AI 4)
-//      (D 1) PD1  3|    |26  PC3 (AI 3)
-//      (D 2) PD2  4|    |25  PC2 (AI 2)
-// PWM+ (D 3) PD3  5|    |24  PC1 (AI 1)
-//      (D 4) PD4  6|    |23  PC0 (AI 0)
-//            VCC  7|    |22  GND
-//            GND  8|    |21  AREF
-//            PB6  9|    |20  AVCC
-//            PB7 10|    |19  PB5 (D 13)
-// PWM+ (D 5) PD5 11|    |18  PB4 (D 12)
-// PWM+ (D 6) PD6 12|    |17  PB3 (D 11) PWM
-//      (D 7) PD7 13|    |16  PB2 (D 10) PWM
-//      (D 8) PB0 14|    |15  PB1 (D 9) PWM
-//                  +----+
-//
-// (PWM+ indicates the additional PWM pins on the ATmega168.)
-
-// ATMEL ATMEGA1280 / ARDUINO
-//
-// 0-7 PE0-PE7   works
-// 8-13 PB0-PB5  works
-// 14-21 PA0-PA7 works 
-// 22-29 PH0-PH7 works
-// 30-35 PG5-PG0 works
-// 36-43 PC7-PC0 works
-// 44-51 PJ7-PJ0 works
-// 52-59 PL7-PL0 works
-// 60-67 PD7-PD0 works
-// A0-A7 PF0-PF7
-// A8-A15 PK0-PK7
-
-
 // these arrays map port names (e.g. port B) to the
 // appropriate addresses for various functions (e.g. reading
 // and writing)
@@ -111,6 +90,9 @@ const uint16_t PROGMEM port_to_mode_PGM[] = {
 	(uint16_t) &DDRB,
 	(uint16_t) &DDRC,
 	(uint16_t) &DDRD,
+#if defined(__AVR_ATmega328PB__)
+	(uint16_t) &DDRE,
+#endif
 };
 
 const uint16_t PROGMEM port_to_output_PGM[] = {
@@ -119,6 +101,9 @@ const uint16_t PROGMEM port_to_output_PGM[] = {
 	(uint16_t) &PORTB,
 	(uint16_t) &PORTC,
 	(uint16_t) &PORTD,
+#if defined(__AVR_ATmega328PB__)
+	(uint16_t) &PORTE,
+#endif
 };
 
 const uint16_t PROGMEM port_to_input_PGM[] = {
@@ -127,6 +112,9 @@ const uint16_t PROGMEM port_to_input_PGM[] = {
 	(uint16_t) &PINB,
 	(uint16_t) &PINC,
 	(uint16_t) &PIND,
+#if defined(__AVR_ATmega328PB__)
+	(uint16_t) &PINE,
+#endif
 };
 
 const uint8_t PROGMEM digital_pin_to_port_PGM[] = {
@@ -150,6 +138,12 @@ const uint8_t PROGMEM digital_pin_to_port_PGM[] = {
 	PC,
 	PC,
 	PC,
+#if defined(__AVR_ATmega328PB__)
+	PE, /* 20 */
+	PE,
+	PE,
+	PE,
+#endif
 };
 
 const uint8_t PROGMEM digital_pin_to_bit_mask_PGM[] = {
@@ -173,6 +167,12 @@ const uint8_t PROGMEM digital_pin_to_bit_mask_PGM[] = {
 	_BV(3),
 	_BV(4),
 	_BV(5),
+#if defined(__AVR_ATmega328PB__)
+	_BV(2), /* 20, port E */
+	_BV(3),
+	_BV(0),
+	_BV(1),
+#endif
 };
 
 const uint8_t PROGMEM digital_pin_to_timer_PGM[] = {
@@ -211,6 +211,12 @@ const uint8_t PROGMEM digital_pin_to_timer_PGM[] = {
 	NOT_ON_TIMER,
 	NOT_ON_TIMER,
 	NOT_ON_TIMER,
+#if defined(__AVR_ATmega328PB__)
+	NOT_ON_TIMER, /* 20 - port E */
+	NOT_ON_TIMER,
+	NOT_ON_TIMER,
+	NOT_ON_TIMER,
+#endif
 };
 
 #endif
