@@ -16,3 +16,8 @@ To get support you can replace it with the below Atmel avr-gcc toolchain (4.9.2)
 **Another project/guide for the ATmega328PB:**
 
 https://hackaday.io/project/9313-uino-mini-super-atmega328pb
+
+
+**Differences between ATmega328/P and ATmega328PB**
+
+http://www.atmel.com/Images/Atmel-42559-Differences-between-ATmega328P-and-ATmega328PB_Application%20Note_AT15007.pdf
