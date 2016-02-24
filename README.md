@@ -1,7 +1,13 @@
 # ATmega328PB Testing
 
-The current Arduino avr-gcc toolchain (4.8.1) does not support the ```ATmega328PB```.
-To get support you can replace it with the below Atmel avr-gcc toolchain (4.9.2) and update the files in ```/arduino/hardware``` with the files from this repository.
+## Hardware
+* [Wattuino Pro Mini PB with ATmega328PB](https://github.com/watterott/wattuino#wattuino-pro-mini-pb)
+* [ATmega328PB Xplained Mini](http://www.atmel.com/tools/MEGA328PB-XMINI.aspx)
+
+
+## Software
+The current Arduino avr-gcc toolchain (4.8.1) does not support the ATmega328PB.
+To get support you can replace it with the below Atmel avr-gcc toolchain (4.9.2) and update the files in ```/arduino/hardware``` with the files from [this repository](https://github.com/watterott/ATmega328PB-Testing/archive/master.zip).
 
 **Atmel Toolchain**
 * Windows: http://www.atmel.com/tools/ATMELAVRTOOLCHAINFORWINDOWS.aspx
