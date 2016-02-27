@@ -19,11 +19,11 @@ To get support you can replace it with the below Atmel avr-gcc toolchain (4.9.2)
 * ATmega Device Pack (ZIP-Archive, not needed): http://packs.download.atmel.com/Atmel.ATmega_DFP.1.0.91.atpack
 
 
-**Another project/guide for the ATmega328PB:**
+**Another project/guide for the ATmega328PB**
+* https://hackaday.io/project/9313-uino-mini-super-atmega328pb
 
-https://hackaday.io/project/9313-uino-mini-super-atmega328pb
-
+**Discussion in the Italian Arduino Forum**
+* http://forum.arduino.cc/index.php?topic=374642.0
 
 **Differences between ATmega328/P and ATmega328PB**
-
-http://www.atmel.com/Images/Atmel-42559-Differences-between-ATmega328P-and-ATmega328PB_Application%20Note_AT15007.pdf
+* http://www.atmel.com/Images/Atmel-42559-Differences-between-ATmega328P-and-ATmega328PB_Application%20Note_AT15007.pdf
