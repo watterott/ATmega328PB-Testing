@@ -14,16 +14,12 @@ To get support you can replace it with the below Atmel avr-gcc toolchain (4.9.2)
 
 * Linux: http://www.atmel.com/tools/ATMELAVRTOOLCHAINFORLINUX.aspx
 
-* Mac: http://distribute.atmel.no/tools/opensource/Atmel-AVR-GNU-Toolchain/3.5.0/
-
-* ATmega Device Pack (ZIP-Archive, not needed): http://packs.download.atmel.com/Atmel.ATmega_DFP.1.0.91.atpack
+* Mac: http://distribute.atmel.no/tools/opensource/Atmel-AVR-GNU-Toolchain/3.5.1/
 
 
-**Another project/guide for the ATmega328PB**
-* https://hackaday.io/project/9313-uino-mini-super-atmega328pb
+## Further Infos
+* Another project/guide for the ATmega328PB: https://hackaday.io/project/9313-uino-mini-super-atmega328pb
 
-**Discussion in the Italian Arduino Forum**
-* http://forum.arduino.cc/index.php?topic=374642.0
+* Discussion in the Italian Arduino Forum: http://forum.arduino.cc/index.php?topic=374642.0
 
-**Differences between ATmega328/P and ATmega328PB**
-* http://www.atmel.com/Images/Atmel-42559-Differences-between-ATmega328P-and-ATmega328PB_Application%20Note_AT15007.pdf
+* Differences between ATmega328/P and ATmega328PB: http://www.atmel.com/Images/Atmel-42559-Differences-between-ATmega328P-and-ATmega328PB_Application%20Note_AT15007.pdf
