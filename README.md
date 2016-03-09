@@ -1,8 +1,8 @@
 # ATmega328PB Testing
 
 ## Hardware
-* [Wattuino Pro Mini PB with ATmega328PB](https://github.com/watterott/wattuino#wattuino-pro-mini-pb)
-* [ATmega328PB Xplained Mini](http://www.atmel.com/tools/MEGA328PB-XMINI.aspx)
+* [Wattuino Pro Mini PB with ATmega328PB](http://www.watterott.com/en/Wattuino-pro-mini-PB-5V-16MHz)
+* [Atmel ATmega328PB Xplained Mini](http://www.watterott.com/en/Atmel-Xplained-Mini-Evalution-Kit)
 
 
 ## Software
