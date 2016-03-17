@@ -12,8 +12,8 @@
  * published by the Free Software Foundation.
  */
 
-#ifndef _SPI_H_INCLUDED
-#define _SPI_H_INCLUDED
+#ifndef _SPI1_H_INCLUDED
+#define _SPI1_H_INCLUDED
 
 #include <Arduino.h>
 #include "SPIDef.h"
