@@ -1,5 +1,7 @@
 # ATmega328PB Testing
 
+Patch v1.0.1 17/03/2016 - modified and debugged by Astrobeed, gpb01, PaoloP.
+
 ## Hardware
 * [Wattuino Pro Mini PB with ATmega328PB](http://www.watterott.com/en/Wattuino-pro-mini-PB-5V-16MHz)
 * [Atmel ATmega328PB Xplained Mini](http://www.watterott.com/en/Atmel-Xplained-Mini-Evalution-Kit)
