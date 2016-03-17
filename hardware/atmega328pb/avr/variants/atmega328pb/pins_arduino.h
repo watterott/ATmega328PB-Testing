@@ -52,13 +52,13 @@ static const uint8_t SDA = 18;
 static const uint8_t SCL = 19;
 
 #if defined(__AVR_ATmega328PB__)
-static const uint8_t SS1   = 10;
-static const uint8_t MOSI1 = 11;
-static const uint8_t MISO1 = 12;
-static const uint8_t SCK1  = 13;
+static const uint8_t SS1   = 20;
+static const uint8_t MOSI1 = 21;
+static const uint8_t MISO1 = 14;
+static const uint8_t SCK1  = 15; 
 
-static const uint8_t SDA1 = 18;
-static const uint8_t SCL1 = 19;
+static const uint8_t SDA1 = 22;
+static const uint8_t SCL1 = 23;
 #endif
 
 #define LED_BUILTIN 13
