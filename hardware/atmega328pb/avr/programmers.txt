@@ -1,6 +1,6 @@
 xplainedmini.name=Atmel AVR XplainedMini (ISP mode)
 xplainedmini.communication=usb
 xplainedmini.protocol=xplainedmini
-xplainedmini.program.protocol=xplainedmini
+xplainedmini.program.protocol=
 xplainedmini.program.tool=avrdude
-xplainedmini.program.extra_params=
+xplainedmini.program.extra_params=-Pusb
