@@ -176,9 +176,15 @@ const uint8_t PROGMEM digital_pin_to_bit_mask_PGM[] = {
 };
 
 const uint8_t PROGMEM digital_pin_to_timer_PGM[] = {
-	NOT_ON_TIMER, /* 0 - port D */
+#if defined(AVR_ATmega328PB)
+	TIMER3A,        /* 0 - port D */
+	TIMER4A,
+	TIMER4B, // TIMER3B or TIMER4B
+#else
 	NOT_ON_TIMER,
 	NOT_ON_TIMER,
+	NOT_ON_TIMER,
+#endif
 	// on the ATmega168, digital pin 3 has hardware pwm
 #if defined(__AVR_ATmega8__)
 	NOT_ON_TIMER,
@@ -195,7 +201,7 @@ const uint8_t PROGMEM digital_pin_to_timer_PGM[] = {
 	TIMER0A,
 #endif
 	NOT_ON_TIMER,
-	NOT_ON_TIMER, /* 8 - port B */
+	NOT_ON_TIMER,   /* 8 - port B */
 	TIMER1A,
 	TIMER1B,
 #if defined(__AVR_ATmega8__)
@@ -206,13 +212,13 @@ const uint8_t PROGMEM digital_pin_to_timer_PGM[] = {
 	NOT_ON_TIMER,
 	NOT_ON_TIMER,
 	NOT_ON_TIMER,
-	NOT_ON_TIMER, /* 14 - port C */
+	NOT_ON_TIMER,   /* 14 - port C */
 	NOT_ON_TIMER,
 	NOT_ON_TIMER,
 	NOT_ON_TIMER,
 	NOT_ON_TIMER,
 #if defined(__AVR_ATmega328PB__)
-	NOT_ON_TIMER, /* 20 - port E */
+	NOT_ON_TIMER,   /* 20 - port E */
 	NOT_ON_TIMER,
 	NOT_ON_TIMER,
 	NOT_ON_TIMER,
