@@ -1,0 +1,56 @@
+{
+  "packages": [
+    {
+      "name": "m328pb",
+      "maintainer": "ATmega328PB",
+      "websiteURL": "https://github.com/watterott/ATmega328PB-Testing",
+      "email": "",
+      "help": {"online": "https://github.com/watterott/ATmega328PB-Testing"},
+
+      "platforms": [
+        {
+          "name": "ATmega328PB Boards",
+          "architecture": "avr",
+          "version": "1.0.0",
+          "category": "contributed",
+          "help": {"online": "https://github.com/watterott/ATmega328PB-Testing"},
+          "url": "https://github.com/watterott/ATmega328PB-Testing/raw/master/m328pb.zip",
+          "archiveFileName": "m328pb-1.0.0.zip",
+          "checksum": "MD5:555499aade985dd3c744c9301a76bd86",
+          "size": "84490",
+          "boards": [
+            {"name": "ATmega328PB"}
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "m328pb",
+              "name": "avr-gcc",
+              "version": "4.9.2"
+            },
+            {
+              "packager": "arduino",
+              "name": "avrdude",
+              "version": "6.0.1-arduino5"
+            }
+          ]
+        }
+      ],
+
+      "tools": [
+        {
+          "name":"avr-gcc",
+          "version":"4.9.2",
+          "systems": [
+            {
+                "host":"i686-mingw32",
+                "url":"https://github.com/watterott/ATmega328PB-Testing/raw/master/avr-gcc-4.9.2-win32.zip",
+                "archiveFileName":"avr-gcc-4.9.2-win32.zip",
+                "checksum":"MD5:3a775c1114e1802831f3a2ad59a7bb69",
+                "size":"41504987"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
