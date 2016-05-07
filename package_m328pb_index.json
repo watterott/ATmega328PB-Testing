@@ -14,8 +14,8 @@
           "version": "1.0.0",
           "category": "contributed",
           "help": {"online": "https://github.com/watterott/ATmega328PB-Testing"},
-          "url": "https://github.com/watterott/ATmega328PB-Testing/raw/master/m328pb.zip",
-          "archiveFileName": "m328pb-1.0.0.zip",
+          "url": "https://github.com/PaoloP74/ATmega328PB-Testing/raw/master/m328pb-core-1.0.0.zip",
+          "archiveFileName": "m328pb-core-1.0.0.zip",
           "checksum": "MD5:555499aade985dd3c744c9301a76bd86",
           "size": "84490",
           "boards": [
@@ -28,7 +28,7 @@
               "version": "4.9.2"
             },
             {
-              "packager": "arduino",
+              "packager": "m328pb",
               "name": "avrdude",
               "version": "6.3.0-watterott1"
             }
@@ -50,7 +50,7 @@
             }
           ]
         },
-{
+		{
           "name": "avrdude",
           "version": "6.3.0-watterott1",
           "systems": [
