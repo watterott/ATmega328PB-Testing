@@ -58,8 +58,8 @@
                 "host":"i686-mingw32",
                 "url":"https://github.com/watterott/ATmega328PB-Testing/raw/master/avrdude-6.3.0-win32.zip",
                 "archiveFileName":"avrdude-6.3.0-win32.zip",
-                "checksum":"MD5:cc1247bb96537bae7caf5985020657f4",
-                "size":"220629"
+                "checksum":"MD5:ec665463025eaafb940e0a3e9ef1fee5",
+                "size":"220965"
             }
           ]
         }
