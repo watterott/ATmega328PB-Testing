@@ -47,6 +47,13 @@
                 "archiveFileName":"avr-gcc-4.9.2-win32.zip",
                 "checksum":"MD5:3a775c1114e1802831f3a2ad59a7bb69",
                 "size":"41504987"
+            },
+            {
+                "host":"x86_64-linux-gnu",
+                "url":"https://github.com/watterott/ATmega328PB-Testing/raw/master/avr-gcc-4.9.2-linux_64.tar.bz2",
+                "archiveFileName":"avr-gcc-4.9.2-linux_64.tar.bz2",
+                "checksum":"MD5:07cacdecda66b82f8addf5bbd8a6e210",
+                "size":"25084308"
             }
           ]
         },
