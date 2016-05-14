@@ -35,4 +35,6 @@ To get support you can replace it with the below Atmel avr-gcc toolchain (4.9.2)
 
 
 ## History / Contributions
-Patch v1.0.1 17/03/2016 - modified and debugged by Astrobeed, gpb01, PaoloP.
+* Patch v1.0.1 - Astrobeed, gpb01, PaoloP
+* avr-gcc 4.9.2 for linux64 - sabas1080
+* [All Pull Requests...](https://github.com/watterott/ATmega328PB-Testing/pulls?q=)
