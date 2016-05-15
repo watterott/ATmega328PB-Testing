@@ -16,14 +16,24 @@ and install the *ATmega328PB Boards* via the Boards Manager (*Tools->Boards->Boa
 
 ### Manual Installation
 The current Arduino avr-gcc toolchain (4.8.1) does not support the ATmega328PB.
-To get support you can replace it with the below Atmel avr-gcc toolchain (4.9.2) and update the files in ```/arduino/hardware``` with the files from [this repository](https://github.com/watterott/ATmega328PB-Testing/archive/master.zip).
+To get support you can replace it with the below avr-gcc toolchain (4.9.2 from Atmel or Arduino) and update the files in ```/arduino/hardware``` with the files from this repository under hardware.
 
-**Atmel Toolchain**
-* Windows: http://www.atmel.com/tools/ATMELAVRTOOLCHAINFORWINDOWS.aspx
+**Atmel Toolchain 4.9.2**
+* Windows: [Download](http://www.atmel.com/images/avr8-gnu-toolchain-installer-3.5.1.87-win32.any.x86.exe),
+           [Infos/Overview](http://www.atmel.com/tools/ATMELAVRTOOLCHAINFORWINDOWS.aspx)
 
-* Linux: http://www.atmel.com/tools/ATMELAVRTOOLCHAINFORLINUX.aspx
+* Linux: [Download](http://www.atmel.com/images/avr8-gnu-toolchain-3.5.1.1671-linux.any.x86.tar.gz),
+         [Infos/Overview](http://www.atmel.com/tools/ATMELAVRTOOLCHAINFORLINUX.aspx)
 
-* Mac: http://distribute.atmel.no/tools/opensource/Atmel-AVR-GNU-Toolchain/3.5.1/
+* Mac: [Download](http://distribute.atmel.no/tools/opensource/Atmel-AVR-GNU-Toolchain/3.5.1/avr8-gnu-toolchain-osx-3.5.1.435-darwin.any.x86_64.tar.gz),
+       [Infos/Overview](http://distribute.atmel.no/tools/opensource/Atmel-AVR-GNU-Toolchain/3.5.1/)
+
+**Arduino Toolchain 4.9.2**
+* Windows: [Download](http://downloads.arduino.cc/tools/avr-gcc-4.9.2-arduino2-i686-mingw32.zip)
+
+* Linux: [Download x86](http://downloads.arduino.cc/tools/avr-gcc-4.9.2-arduino2-i686-pc-linux-gnu.tar.bz2), [Download x64](http://downloads.arduino.cc/tools/avr-gcc-4.9.2-arduino2-x86_64-pc-linux-gnu.tar.bz2)
+
+* Mac: [Download](http://downloads.arduino.cc/tools/avr-gcc-4.9.2-arduino2-i386-apple-darwin11.tar.bz2)
 
 
 ## Further Infos
