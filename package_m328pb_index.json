@@ -14,7 +14,7 @@
           "version": "1.0.0",
           "category": "contributed",
           "help": {"online": "https://github.com/watterott/ATmega328PB-Testing"},
-          "url": "https://github.com/watterott/ATmega328PB-Testing/raw/master/m328pb.zip",
+          "url": "https://github.com/watterott/ATmega328PB-Testing/610a28ee8b438d05bab3f2e71b701fa6958fb4c3/master/m328pb.zip",
           "archiveFileName": "m328pb-1.0.0.zip",
           "checksum": "MD5:6c30323550aa72e0b7eb3716ca39fb0b",
           "size": "53826",
@@ -43,14 +43,14 @@
           "systems": [
             {
                 "host":"i686-mingw32",
-                "url":"https://github.com/watterott/ATmega328PB-Testing/raw/master/avr-gcc-4.9.2-win32.zip",
+                "url":"https://github.com/watterott/ATmega328PB-Testing/raw/3d10e8ce26fc1753a7e115136163c1bd36d258ee/avr-gcc-4.9.2-win32.zip",
                 "archiveFileName":"avr-gcc-4.9.2-win32.zip",
                 "checksum":"MD5:3a775c1114e1802831f3a2ad59a7bb69",
                 "size":"41504987"
             },
             {
                 "host":"x86_64-linux-gnu",
-                "url":"https://github.com/watterott/ATmega328PB-Testing/raw/master/avr-gcc-4.9.2-linux_64.tar.bz2",
+                "url":"https://github.com/watterott/ATmega328PB-Testing/raw/7cd41a631b90e374868bd139bf4a7c77fcbbffc5/avr-gcc-4.9.2-linux_64.tar.bz2",
                 "archiveFileName":"avr-gcc-4.9.2-linux_64.tar.bz2",
                 "checksum":"MD5:07cacdecda66b82f8addf5bbd8a6e210",
                 "size":"25084308"
@@ -63,7 +63,7 @@
           "systems": [
             {
                 "host":"i686-mingw32",
-                "url":"https://github.com/watterott/ATmega328PB-Testing/raw/master/avrdude-6.3.0-win32.zip",
+                "url":"https://github.com/watterott/ATmega328PB-Testing/raw/610a28ee8b438d05bab3f2e71b701fa6958fb4c3/avrdude-6.3.0-win32.zip",
                 "archiveFileName":"avrdude-6.3.0-win32.zip",
                 "checksum":"MD5:ec665463025eaafb940e0a3e9ef1fee5",
                 "size":"220965"
