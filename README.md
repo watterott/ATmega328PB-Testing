@@ -19,10 +19,11 @@ The current Arduino avr-gcc toolchain (4.8.1) does not support the ATmega328PB.
 To get support you can replace it with the below avr-gcc toolchain (4.9.2 from Atmel or Arduino) and update the files in ```/arduino/hardware``` with the [files from this repository under hardware](https://github.com/watterott/ATmega328PB-Testing/raw/master/hardware.zip).
 
 **Atmel Toolchain (GCC 4.9.2)**
-* Windows: [Download](http://www.atmel.com/images/avr8-gnu-toolchain-installer-3.5.1.87-win32.any.x86.exe),
+* Windows: [Download](http://www.atmel.com/images/avr8-gnu-toolchain-installer-3.5.2.89-win32.any.x86.exe),
            [Infos/Overview](http://www.atmel.com/tools/ATMELAVRTOOLCHAINFORWINDOWS.aspx)
 
-* Linux: [Download](http://www.atmel.com/images/avr8-gnu-toolchain-3.5.1.1671-linux.any.x86.tar.gz),
+* Linux: [Download x86](http://www.atmel.com/images/avr8-gnu-toolchain-3.5.2.1680-linux.any.x86.tar.gz),
+         [Download x64](http://www.atmel.com/images/avr8-gnu-toolchain-3.5.2.1680-linux.any.x86_64.tar.gz),
          [Infos/Overview](http://www.atmel.com/tools/ATMELAVRTOOLCHAINFORLINUX.aspx)
 
 * Mac: [Download](http://distribute.atmel.no/tools/opensource/Atmel-AVR-GNU-Toolchain/3.5.2/avr8-gnu-toolchain-osx-3.5.2.444-darwin.any.x86_64.tar.gz),
