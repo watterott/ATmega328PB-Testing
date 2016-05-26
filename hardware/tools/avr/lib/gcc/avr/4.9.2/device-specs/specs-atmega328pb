@@ -91,6 +91,6 @@
 
 
 *cpp:
-	-D__AVR_ATmega328PB__ -D__AVR_DEVICE_NAME__=atmega328pb -D__AVR_DEV_LIB_NAME__=m328pb
+	-D__AVR_ATmega328PB__ -D__AVR_DEVICE_NAME__=atmega328pb
 
 # End of file

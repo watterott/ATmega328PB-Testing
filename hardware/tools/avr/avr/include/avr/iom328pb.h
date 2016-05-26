@@ -1,6 +1,6 @@
 /*****************************************************************************
  *
- * Copyright (C) 2015 Atmel Corporation
+ * Copyright (C) 2016 Atmel Corporation
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -31,6 +31,11 @@
  * POSSIBILITY OF SUCH DAMAGE.
  ****************************************************************************/
 
+
+#ifndef _AVR_ATMEGA328PB_H_INCLUDED
+#define _AVR_ATMEGA328PB_H_INCLUDED
+
+
 #ifndef _AVR_IO_H_
 #  error "Include <avr/io.h> instead of this file."
 #endif
@@ -40,11 +45,6 @@
 #else
 #  error "Attempt to include more than one <avr/ioXXX.h> file."
 #endif
-
-
-#ifndef _AVR_IOM328PB_H_
-#define _AVR_IOM328PB_H_ 1
-
 
 /* Registers and associated bit numbers */
 
@@ -506,12 +506,14 @@
 #define OCIE2B  2
 
 #define TIMSK3  _SFR_MEM8(0x71)
-#define TOIE    0
-#define OCIEA   1
-#define OCIEB   2
-#define ICIE    5
+#define TOIE3   0
+#define OCIE3A  1
+#define OCIE3B  2
 
 #define TIMSK4  _SFR_MEM8(0x72)
+#define TOIE4   0
+#define OCIE4A  1
+#define OCIE4B  2
 
 #define PCMSK3  _SFR_MEM8(0x73)
 #define PCINT24 0
@@ -715,8 +717,19 @@
 #define OCR4BH  _SFR_MEM8(0xAB)
 
 #define SPCR1   _SFR_MEM8(0xAC)
+#define SPR10   0
+#define SPR11   1
+#define CPHA1   2
+#define CPOL1   3
+#define MSTR1   4
+#define DORD1   5
+#define SPE1    6
+#define SPIE1   7
 
 #define SPSR1   _SFR_MEM8(0xAD)
+#define SPI2X1  0
+#define WCOL1   6
+#define SPIF1   7
 
 #define SPDR1   _SFR_MEM8(0xAE)
 
@@ -846,39 +859,39 @@
 /* Reserved [0xC7] */
 
 #define UCSR1A  _SFR_MEM8(0xC8)
-#define MPCM    0
-#define U2X     1
-#define UPE     2
-#define DOR     3
-#define FE      4
-#define UDRE    5
-#define TXC     6
-#define RXC     7
+#define MPCM1   0
+#define U2X1    1
+#define UPE1    2
+#define DOR1    3
+#define FE1     4
+#define UDRE1   5
+#define TXC1    6
+#define RXC1    7
 
 #define UCSR1B  _SFR_MEM8(0xC9)
-#define TXB8    0
-#define RXB8    1
-#define UCSZ2   2
-#define TXEN    3
-#define RXEN    4
-#define UDRIE   5
-#define TXCIE   6
-#define RXCIE   7
+#define TXB81   0
+#define RXB81   1
+#define UCSZ12  2
+#define TXEN1   3
+#define RXEN1   4
+#define UDRIE1  5
+#define TXCIE1  6
+#define RXCIE1  7
 
 #define UCSR1C  _SFR_MEM8(0xCA)
-#define UCPOL   0
-#define UCSZ0   1
-#define UCSZ1   2
-#define USBS    3
-#define UPM0    4
-#define UPM1    5
-#define UMSEL0  6
-#define UMSEL1  7
+#define UCPOL1  0
+#define UCSZ10  1
+#define UCSZ11  2
+#define USBS1   3
+#define UPM10   4
+#define UPM11   5
+#define UMSEL10 6
+#define UMSEL11 7
 
 #define UCSR1D  _SFR_MEM8(0xCB)
-#define SFDE    5
-#define RXS     6
-#define RXSIE   7
+#define SFDE1   5
+#define RXS1    6
+#define RXSIE1  7
 
 /* Combine UBRR1L and UBRR1H */
 #define UBRR1   _SFR_MEM16(0xCC)
@@ -893,14 +906,35 @@
 #define TWBR1   _SFR_MEM8(0xD8)
 
 #define TWSR1   _SFR_MEM8(0xD9)
+#define TWPS10  0
+#define TWPS11  1
+#define TWS13   3
+#define TWS14   4
+#define TWS15   5
+#define TWS16   6
+#define TWS17   7
 
 #define TWAR1   _SFR_MEM8(0xDA)
 
 #define TWDR1   _SFR_MEM8(0xDB)
 
 #define TWCR1   _SFR_MEM8(0xDC)
+#define TWIE1   0
+#define TWEN1   2
+#define TWWC1   3
+#define TWSTO1  4
+#define TWSTA1  5
+#define TWEA1   6
+#define TWINT1  7
 
 #define TWAMR1  _SFR_MEM8(0xDD)
+#define TWAM10  1
+#define TWAM11  2
+#define TWAM12  3
+#define TWAM13  4
+#define TWAM14  5
+#define TWAM15  6
+#define TWAM16  7
 
 
 
@@ -1159,5 +1193,5 @@
 #define SIGNATURE_2 0x16
 
 
-#endif /* #ifdef _AVR_IOM328PB_H_ */
+#endif /* #ifdef _AVR_ATMEGA328PB_H_INCLUDED */
 
