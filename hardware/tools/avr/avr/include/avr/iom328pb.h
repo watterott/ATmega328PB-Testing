@@ -509,11 +509,13 @@
 #define TOIE3   0
 #define OCIE3A  1
 #define OCIE3B  2
+#define ICIE3   5
 
 #define TIMSK4  _SFR_MEM8(0x72)
 #define TOIE4   0
 #define OCIE4A  1
 #define OCIE4B  2
+#define ICIE4   5
 
 #define PCMSK3  _SFR_MEM8(0x73)
 #define PCINT24 0
