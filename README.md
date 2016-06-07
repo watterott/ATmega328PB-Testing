@@ -29,6 +29,8 @@ To get support you can replace it with the below avr-gcc toolchain (4.9.2 from A
 * Mac: [Download](http://distribute.atmel.no/tools/opensource/Atmel-AVR-GNU-Toolchain/3.5.2/avr8-gnu-toolchain-osx-3.5.2.444-darwin.any.x86_64.tar.gz),
        [Infos/Overview](http://distribute.atmel.no/tools/opensource/Atmel-AVR-GNU-Toolchain/3.5.2/)
 
+* [Atmel Device Packs](http://packs.download.atmel.com)
+
 **Arduino Toolchain (GCC 4.9.2)**
 * Windows: [Download](http://downloads.arduino.cc/tools/avr-gcc-4.9.2-arduino2-i686-mingw32.zip)
 
