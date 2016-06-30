@@ -32,11 +32,12 @@ To get support you can replace it with the below avr-gcc toolchain (4.9.2 from A
 * [Atmel Device Packs](http://packs.download.atmel.com)
 
 **Arduino Toolchain (GCC 4.9.2)**
-* Windows: [Download](http://downloads.arduino.cc/tools/avr-gcc-4.9.2-arduino2-i686-mingw32.zip)
+* Windows: [Download](http://downloads.arduino.cc/tools/avr-gcc-4.9.2-arduino4-i686-mingw32.zip)
 
-* Linux: [Download x86](http://downloads.arduino.cc/tools/avr-gcc-4.9.2-arduino2-i686-pc-linux-gnu.tar.bz2), [Download x64](http://downloads.arduino.cc/tools/avr-gcc-4.9.2-arduino2-x86_64-pc-linux-gnu.tar.bz2)
+* Linux: [Download x86](http://downloads.arduino.cc/tools/avr-gcc-4.9.2-arduino4-i686-pc-linux-gnu.tar.bz2),
+         [Download x64](http://downloads.arduino.cc/tools/avr-gcc-4.9.2-arduino4-x86_64-pc-linux-gnu.tar.bz2)
 
-* Mac: [Download](http://downloads.arduino.cc/tools/avr-gcc-4.9.2-arduino2-i386-apple-darwin11.tar.bz2)
+* Mac: [Download](http://downloads.arduino.cc/tools/avr-gcc-4.9.2-arduino4-i386-apple-darwin11.tar.bz2)
 
 
 ## Further Infos
