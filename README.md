@@ -20,24 +20,27 @@ To get support you can replace it with the below avr-gcc toolchain (4.9.2 from A
 
 **Atmel Toolchain (GCC 4.9.2)**
 * Windows: [Download](http://www.atmel.com/images/avr8-gnu-toolchain-installer-3.5.3.90-win32.any.x86.exe),
-           [Infos/Overview](http://www.atmel.com/tools/ATMELAVRTOOLCHAINFORWINDOWS.aspx)
+           [Infos](http://www.atmel.com/tools/ATMELAVRTOOLCHAINFORWINDOWS.aspx)
 
 * Linux: [Download x86](http://www.atmel.com/images/avr8-gnu-toolchain-3.5.3.1700-linux.any.x86.tar.gz),
          [Download x64](http://www.atmel.com/images/avr8-gnu-toolchain-3.5.3.1700-linux.any.x86_64.tar.gz),
-         [Infos/Overview](http://www.atmel.com/tools/ATMELAVRTOOLCHAINFORLINUX.aspx)
+         [Infos](http://www.atmel.com/tools/ATMELAVRTOOLCHAINFORLINUX.aspx)
 
 * Mac: [Download](http://distribute.atmel.no/tools/opensource/Atmel-AVR-GNU-Toolchain/3.5.3/avr8-gnu-toolchain-osx-3.5.3.460-darwin.any.x86_64.tar.gz),
-       [Infos/Overview](http://distribute.atmel.no/tools/opensource/Atmel-AVR-GNU-Toolchain/3.5.2/)
+       [Infos](http://distribute.atmel.no/tools/opensource/Atmel-AVR-GNU-Toolchain/3.5.3/)
 
 * [Atmel Device Packs](http://packs.download.atmel.com)
 
 **Arduino Toolchain (GCC 4.9.2)**
-* Windows: [Download](http://downloads.arduino.cc/tools/avr-gcc-4.9.2-arduino4-i686-mingw32.zip)
+* Windows: [Download](http://downloads.arduino.cc/tools/avr-gcc-4.9.2-arduino4-i686-mingw32.zip),
+           [Infos](https://github.com/arduino/Arduino/pull/5021)
 
 * Linux: [Download x86](http://downloads.arduino.cc/tools/avr-gcc-4.9.2-arduino4-i686-pc-linux-gnu.tar.bz2),
-         [Download x64](http://downloads.arduino.cc/tools/avr-gcc-4.9.2-arduino4-x86_64-pc-linux-gnu.tar.bz2)
+         [Download x64](http://downloads.arduino.cc/tools/avr-gcc-4.9.2-arduino4-x86_64-pc-linux-gnu.tar.bz2),
+         [Infos](https://github.com/arduino/Arduino/pull/5021)
 
-* Mac: [Download](http://downloads.arduino.cc/tools/avr-gcc-4.9.2-arduino4-i386-apple-darwin11.tar.bz2)
+* Mac: [Download](http://downloads.arduino.cc/tools/avr-gcc-4.9.2-arduino4-i386-apple-darwin11.tar.bz2),
+       [Infos](https://github.com/arduino/Arduino/pull/5021)
 
 
 ## Further Infos
