@@ -14,33 +14,8 @@ https://github.com/watterott/ATmega328PB-Testing/raw/master/package_m328pb_index
 ```
 and install the *ATmega328PB Boards* via the Boards Manager (*Tools->Boards->Boards Manager*).
 
-### Manual Installation
-The current Arduino avr-gcc toolchain (4.8.1) does not support the ATmega328PB.
-To get support you can replace it with the below avr-gcc toolchain (4.9.2 from Atmel or Arduino) and update the files in ```/arduino/hardware``` with the [files from this repository under hardware](https://github.com/watterott/ATmega328PB-Testing/raw/master/hardware.zip).
-
-**Atmel Toolchain (GCC 4.9.2)**
-* Windows: [Download](http://www.atmel.com/images/avr8-gnu-toolchain-installer-3.5.3.90-win32.any.x86.exe),
-           [Infos](http://www.atmel.com/tools/ATMELAVRTOOLCHAINFORWINDOWS.aspx)
-
-* Linux: [Download x86](http://www.atmel.com/images/avr8-gnu-toolchain-3.5.3.1700-linux.any.x86.tar.gz),
-         [Download x64](http://www.atmel.com/images/avr8-gnu-toolchain-3.5.3.1700-linux.any.x86_64.tar.gz),
-         [Infos](http://www.atmel.com/tools/ATMELAVRTOOLCHAINFORLINUX.aspx)
-
-* Mac: [Download](http://distribute.atmel.no/tools/opensource/Atmel-AVR-GNU-Toolchain/3.5.3/avr8-gnu-toolchain-osx-3.5.3.460-darwin.any.x86_64.tar.gz),
-       [Infos](http://distribute.atmel.no/tools/opensource/Atmel-AVR-GNU-Toolchain/3.5.3/)
-
-* [Atmel Device Packs](http://packs.download.atmel.com)
-
-**Arduino Toolchain (GCC 4.9.2)**
-* Windows: [Download](http://downloads.arduino.cc/tools/avr-gcc-4.9.2-arduino4-i686-mingw32.zip),
-           [Infos](https://github.com/arduino/Arduino/pull/5021)
-
-* Linux: [Download x86](http://downloads.arduino.cc/tools/avr-gcc-4.9.2-arduino4-i686-pc-linux-gnu.tar.bz2),
-         [Download x64](http://downloads.arduino.cc/tools/avr-gcc-4.9.2-arduino4-x86_64-pc-linux-gnu.tar.bz2),
-         [Infos](https://github.com/arduino/Arduino/pull/5021)
-
-* Mac: [Download](http://downloads.arduino.cc/tools/avr-gcc-4.9.2-arduino4-i386-apple-darwin11.tar.bz2),
-       [Infos](https://github.com/arduino/Arduino/pull/5021)
+### Manual Installation (Arduino >=1.6.10)
+Update the files in ```/arduino/hardware``` with the [files from this repository under hardware](https://github.com/watterott/ATmega328PB-Testing/raw/master/hardware.zip).
 
 
 ## Further Infos
