@@ -12,12 +12,14 @@
 * The current avr-gcc (4.9.2-atmel3.5.3-arduino2) and avrdude (6.3.0-arduino2) have not all files for the Atmega328PB:
   So you have to update the files in ```/arduino/hardware``` with the [files from this repository under hardware](https://github.com/watterott/ATmega328PB-Testing/raw/master/hardware.zip).
 
-* Add the following URL to the Arduino Boards Manager (*File->Preferences*):
+* When in the future all files are included with the toolchain then the Boards Manager can be used:
+
+  Add the following URL to the Arduino Boards Manager (*File->Preferences*).
   ```
   https://github.com/watterott/ATmega328PB-Testing/raw/master/package_m328pb_index.json
   ```
 
-* Install the *ATmega328PB Boards* via the Boards Manager (*Tools->Boards->Boards Manager*).
+  Install the *ATmega328PB Boards* via the Boards Manager (*Tools->Boards->Boards Manager*).
 
 
 ## Further Infos
