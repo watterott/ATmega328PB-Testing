@@ -7,15 +7,17 @@
 
 ## Software
 
-### Boards Package
-Add the following URL to the Arduino Boards Manager (*File->Preferences*):
-```
-https://github.com/watterott/ATmega328PB-Testing/raw/master/package_m328pb_index.json
-```
-and install the *ATmega328PB Boards* via the Boards Manager (*Tools->Boards->Boards Manager*).
+### Installation on Arduino IDE 1.6.10+
 
-### Manual Installation (Arduino >=1.6.10)
-Update the files in ```/arduino/hardware``` with the [files from this repository under hardware](https://github.com/watterott/ATmega328PB-Testing/raw/master/hardware.zip).
+* The current avr-gcc (4.9.2-atmel3.5.3-arduino2) and avrdude (6.3.0-arduino2) have not all files for the Atmega328PB:
+  So you have to update the files in ```/arduino/hardware``` with the [files from this repository under hardware](https://github.com/watterott/ATmega328PB-Testing/raw/master/hardware.zip).
+
+* Add the following URL to the Arduino Boards Manager (*File->Preferences*):
+  ```
+  https://github.com/watterott/ATmega328PB-Testing/raw/master/package_m328pb_index.json
+  ```
+
+* Install the *ATmega328PB Boards* via the Boards Manager (*Tools->Boards->Boards Manager*).
 
 
 ## Further Infos
