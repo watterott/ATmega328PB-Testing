@@ -24,7 +24,7 @@
             {
               "packager": "arduino",
               "name": "avrdude",
-              "version": "6.3.0-arduino2"
+              "version": "6.3.0-arduino6"
             }
           ]
         },
