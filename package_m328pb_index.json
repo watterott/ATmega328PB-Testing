@@ -11,6 +11,19 @@
         {
           "name": "ATmega328PB Boards",
           "architecture": "avr",
+          "version": "1.0.7",
+          "category": "contributed",
+          "help": {"online": "https://github.com/watterott/ATmega328PB-Testing"},
+          "url": "https://github.com/watterott/ATmega328PB-Testing/raw/db85f07b07a3d807c6b0d765819b18492a1b0bd3/m328pb.zip",
+          "archiveFileName": "m328pb-1.0.7.zip",
+          "size": "85517",
+          "boards": [
+            {"name": "ATmega328PB"}
+          ]
+        },
+        {
+          "name": "ATmega328PB Boards",
+          "architecture": "avr",
           "version": "1.0.6",
           "category": "contributed",
           "help": {"online": "https://github.com/watterott/ATmega328PB-Testing"},
@@ -24,7 +37,7 @@
             {
               "packager": "arduino",
               "name": "avrdude",
-              "version": "6.3.0-arduino6"
+              "version": "6.3.0-arduino2"
             }
           ]
         },
