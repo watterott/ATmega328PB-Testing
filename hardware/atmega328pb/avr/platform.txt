@@ -87,8 +87,8 @@ recipe.preproc.macros="{compiler.path}{compiler.cpp.cmd}" {compiler.cpp.flags} {
 tools.avrdude.cmd=bin/avrdude
 tools.avrdude.cmd.windows=bin/avrdude.exe
 tools.avrdude.path={runtime.tools.avrdude.path}
-#tools.avrdude.path={runtime.tools.avrdude.path}
-tools.avrdude.path={runtime.tools.avrdude-6.3.0-arduino2.path}
+#tools.avrdude.path={runtime.tools.avrdude-6.3.0-arduino6.path}
+tools.avrdude.path={runtime.tools.avrdude.path}
 #tools.avrdude.config={path}/etc/avrdude.conf
 tools.avrdude.config={runtime.platform.path}/tools/avrdude.conf
 
