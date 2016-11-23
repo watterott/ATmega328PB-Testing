@@ -1179,7 +1179,7 @@
 #define FUSE_BODLEVEL1   (unsigned char)~_BV(1)
 #define FUSE_BODLEVEL2   (unsigned char)~_BV(2)
 #define FUSE_CFD         (unsigned char)~_BV(3)
-#define EFUSE_DEFAULT    (0xFF)
+#define EFUSE_DEFAULT    (FUSE_CFD)
 
 
 
