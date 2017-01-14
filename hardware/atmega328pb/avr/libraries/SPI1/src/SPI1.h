@@ -21,29 +21,29 @@
 /* SPI 1 Class *****************************************************/
 class SPI1Settings {
 public:
-  	SPI1Settings(uint32_t clock, uint8_t bitOrder, uint8_t dataMode) 
+  	SPI1Settings(uint32_t clock, uint8_t bitOrder, uint8_t dataMode)
 	{
-    	if (__builtin_constant_p(clock)) 
+    	if (__builtin_constant_p(clock))
 		{
       		init_AlwaysInline(clock, bitOrder, dataMode);
-    	} else 
+    	} else
 		{
       		init_MightInline(clock, bitOrder, dataMode);
     	}
   	}
-  
-	SPI1Settings() 
+
+	SPI1Settings()
 	{
     	init_AlwaysInline(4000000, MSBFIRST, SPI_MODE0);
   	}
 
 private:
-  	void init_MightInline(uint32_t clock, uint8_t bitOrder, uint8_t dataMode) 
+  	void init_MightInline(uint32_t clock, uint8_t bitOrder, uint8_t dataMode)
 	{
     	init_AlwaysInline(clock, bitOrder, dataMode);
   	}
-  	
-	void init_AlwaysInline(uint32_t clock, uint8_t bitOrder, uint8_t dataMode) __attribute__((__always_inline__)) 
+
+	void init_AlwaysInline(uint32_t clock, uint8_t bitOrder, uint8_t dataMode) __attribute__((__always_inline__))
 	{
 		// Clock settings are defined as follows. Note that this shows SPI2X
 		// inverted, so the bits form increasing numbers. Also note that
@@ -111,7 +111,7 @@ private:
   friend class SPI1Class;
 };
 
-class SPI1Class 
+class SPI1Class
 {
 public:
   // Initialize the SPI library
@@ -182,7 +182,7 @@ public:
 #endif
   }
 
-  inline static uint16_t transfer16(uint16_t data) 
+  inline static uint16_t transfer16(uint16_t data)
   {
     union { uint16_t val; struct { uint8_t lsb; uint8_t msb; }; } in, out;
     in.val = data;
@@ -210,7 +210,7 @@ public:
     return out.val;
   }
 
-  inline static void transfer(void *buf, size_t count) 
+  inline static void transfer(void *buf, size_t count)
   {
     if (count == 0) return;
     uint8_t *p = (uint8_t *)buf;
@@ -231,7 +231,7 @@ public:
 
   // After performing a group of transfers and releasing the chip select
   // signal, this function allows others to access the SPI bus
-  inline static void endTransaction(void) 
+  inline static void endTransaction(void)
   {
     #ifdef SPI_TRANSACTION_MISMATCH_LED
     if (!inTransactionFlag) {
@@ -263,7 +263,7 @@ public:
 
   // This function is deprecated.  New applications should use
   // beginTransaction() to configure SPI settings.
-  inline static void setBitOrder(uint8_t bitOrder) 
+  inline static void setBitOrder(uint8_t bitOrder)
 {
 #if defined(__AVR_ATmega328PB__)
     if (bitOrder == LSBFIRST) SPCR1 |= _BV(DORD);

@@ -3,7 +3,7 @@
  * Copyright (c) 2014 by Paul Stoffregen <paul@pjrc.com> (Transaction API)
  * Copyright (c) 2014 by Matthijs Kooijman <matthijs@stdin.nl> (SPISettings AVR)
  * Copyright (c) 2014 by Andrew J. Kroll <xxxajk@gmail.com> (atomicity fixes)
- * Copyright (c) 2014 by Andre Moehl andre@ib-moehl.de (SPI1 Class, for Atmega3258PB Support)
+ * Copyright (c) 2014 by Andre Moehl andre@ib-moehl.de (SPI1 Class, for Atmega328PB Support)
  * SPI Master library for arduino.
  *
  * This file is free software; you can redistribute it and/or modify
@@ -69,7 +69,7 @@ void SPI1Class::begin()
   SREG = sreg;
 }
 
-void SPI1Class::end() 
+void SPI1Class::end()
 {
   uint8_t sreg = SREG;
   noInterrupts(); // Protect from a scheduler and prevent transactionBegin
@@ -77,7 +77,7 @@ void SPI1Class::end()
   if (initialized)
     initialized--;
   // If there are no more references disable SPI
-  if (!initialized) 
+  if (!initialized)
   {
 #if defined(__AVR_ATmega328PB__)
     SPCR0 &= ~_BV(SPE);
