@@ -3,7 +3,7 @@
  * Copyright (c) 2014 by Paul Stoffregen <paul@pjrc.com> (Transaction API)
  * Copyright (c) 2014 by Matthijs Kooijman <matthijs@stdin.nl> (SPISettings AVR)
  * Copyright (c) 2014 by Andrew J. Kroll <xxxajk@gmail.com> (atomicity fixes)
- * Copyright (c) 2014 by Andre Moehl andre@ib-moehl.de (SPI1 Class, for Atmega328PB Support)
+ * Copyright (c) 2014 by Andre Moehl andre@ib-moehl.de (SPI1 Class, for ATmega328PB Support)
  * SPI Master library for arduino.
  *
  * This file is free software; you can redistribute it and/or modify
@@ -32,28 +32,28 @@ void SPI1Class::begin()
   uint8_t sreg = SREG;
   noInterrupts(); // Protect from a scheduler and prevent transactionBegin
   if (!initialized) {
-    // Set SS to high so a connected chip will be "deselected" by default
-    uint8_t port = digitalPinToPort(SS);
-    uint8_t bit = digitalPinToBitMask(SS);
+    // Set SS1 to high so a connected chip will be "deselected" by default
+    uint8_t port = digitalPinToPort(SS1);
+    uint8_t bit = digitalPinToBitMask(SS1);
     volatile uint8_t *reg = portModeRegister(port);
 
-    // if the SS pin is not already configured as an output
+    // if the SS1 pin is not already configured as an output
     // then set it high (to enable the internal pull-up resistor)
     if(!(*reg & bit)){
-      digitalWrite(SS, HIGH);
+      digitalWrite(SS1, HIGH);
     }
 
-    // When the SS pin is set as OUTPUT, it can be used as
+    // When the SS1 pin is set as OUTPUT, it can be used as
     // a general purpose output port (it doesn't influence
     // SPI operations).
-    pinMode(SS, OUTPUT);
+    pinMode(SS1, OUTPUT);
 
-    // Warning: if the SS pin ever becomes a LOW INPUT then SPI
+    // Warning: if the SS1 pin ever becomes a LOW INPUT then SPI
     // automatically switches to Slave, so the data direction of
-    // the SS pin MUST be kept as OUTPUT.
+    // the SS1 pin MUST be kept as OUTPUT.
 #if defined(__AVR_ATmega328PB__)
-    SPCR1 |= _BV(MSTR);
-    SPCR1 |= _BV(SPE);
+    SPCR1 |= _BV(MSTR1);
+    SPCR1 |= _BV(SPE1);
 #endif
 
     // Set direction register for SCK and MOSI pin.
@@ -80,7 +80,7 @@ void SPI1Class::end()
   if (!initialized)
   {
 #if defined(__AVR_ATmega328PB__)
-    SPCR0 &= ~_BV(SPE);
+    SPCR0 &= ~_BV(SPE1);
 #endif
     interruptMode = 0;
     #ifdef SPI_TRANSACTION_MISMATCH_LED
