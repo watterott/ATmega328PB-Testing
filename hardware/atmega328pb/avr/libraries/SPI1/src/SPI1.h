@@ -3,7 +3,7 @@
  * Copyright (c) 2014 by Paul Stoffregen <paul@pjrc.com> (Transaction API)
  * Copyright (c) 2014 by Matthijs Kooijman <matthijs@stdin.nl> (SPISettings AVR)
  * Copyright (c) 2014 by Andrew J. Kroll <xxxajk@gmail.com> (atomicity fixes)
- * Copyright (c) 2014 by Andre Moehl andre@ib-moehl.de (SPI1 Class, for Atmega3258PB Support)
+ * Copyright (c) 2014 by Andre Moehl andre@ib-moehl.de (SPI1 Class, for ATmega328PB Support)
  * SPI Master library for arduino.
  *
  * This file is free software; you can redistribute it and/or modify
@@ -21,29 +21,29 @@
 /* SPI 1 Class *****************************************************/
 class SPI1Settings {
 public:
-  	SPI1Settings(uint32_t clock, uint8_t bitOrder, uint8_t dataMode) 
+  	SPI1Settings(uint32_t clock, uint8_t bitOrder, uint8_t dataMode)
 	{
-    	if (__builtin_constant_p(clock)) 
+    	if (__builtin_constant_p(clock))
 		{
       		init_AlwaysInline(clock, bitOrder, dataMode);
-    	} else 
+    	} else
 		{
       		init_MightInline(clock, bitOrder, dataMode);
     	}
   	}
-  
-	SPI1Settings() 
+
+	SPI1Settings()
 	{
     	init_AlwaysInline(4000000, MSBFIRST, SPI_MODE0);
   	}
 
 private:
-  	void init_MightInline(uint32_t clock, uint8_t bitOrder, uint8_t dataMode) 
+  	void init_MightInline(uint32_t clock, uint8_t bitOrder, uint8_t dataMode)
 	{
     	init_AlwaysInline(clock, bitOrder, dataMode);
   	}
-  	
-	void init_AlwaysInline(uint32_t clock, uint8_t bitOrder, uint8_t dataMode) __attribute__((__always_inline__)) 
+
+	void init_AlwaysInline(uint32_t clock, uint8_t bitOrder, uint8_t dataMode) __attribute__((__always_inline__))
 	{
 		// Clock settings are defined as follows. Note that this shows SPI2X
 		// inverted, so the bits form increasing numbers. Also note that
@@ -102,7 +102,7 @@ private:
 
     // Pack into the SPI1Settings class
 #if defined(__AVR_ATmega328PB__)
-   		spcr = _BV(SPE) | _BV(MSTR) | ((bitOrder == LSBFIRST) ? _BV(DORD) : 0) |
+    spcr = _BV(SPE1) | _BV(MSTR1) | ((bitOrder == LSBFIRST) ? _BV(DORD1) : 0) |
       (dataMode & SPI_MODE_MASK) | ((clockDiv >> 1) & SPI_CLOCK_MASK);
 #endif
   }
@@ -111,7 +111,7 @@ private:
   friend class SPI1Class;
 };
 
-class SPI1Class 
+class SPI1Class
 {
 public:
   // Initialize the SPI library
@@ -182,35 +182,35 @@ public:
 #endif
   }
 
-  inline static uint16_t transfer16(uint16_t data) 
+  inline static uint16_t transfer16(uint16_t data)
   {
     union { uint16_t val; struct { uint8_t lsb; uint8_t msb; }; } in, out;
     in.val = data;
 #if defined(__AVR_ATmega328PB__)
-    if (!(SPCR1 & _BV(DORD))) {
+    if (!(SPCR1 & _BV(DORD1))) {
       SPDR1 = in.msb;
       asm volatile("nop"); // See transfer(uint8_t) function
-      while (!(SPSR1 & _BV(SPIF))) ;
+      while (!(SPSR1 & _BV(SPIF1))) ;
       out.msb = SPDR1;
       SPDR1 = in.lsb;
       asm volatile("nop");
-      while (!(SPSR1 & _BV(SPIF))) ;
+      while (!(SPSR1 & _BV(SPIF1))) ;
       out.lsb = SPDR1;
     } else {
       SPDR1 = in.lsb;
       asm volatile("nop");
-      while (!(SPSR1 & _BV(SPIF))) ;
+      while (!(SPSR1 & _BV(SPIF1))) ;
       out.lsb = SPDR1;
       SPDR1 = in.msb;
       asm volatile("nop");
-      while (!(SPSR1 & _BV(SPIF))) ;
+      while (!(SPSR1 & _BV(SPIF1))) ;
       out.msb = SPDR1;
     }
 #endif
     return out.val;
   }
 
-  inline static void transfer(void *buf, size_t count) 
+  inline static void transfer(void *buf, size_t count)
   {
     if (count == 0) return;
     uint8_t *p = (uint8_t *)buf;
@@ -218,12 +218,12 @@ public:
     SPDR1 = *p;
     while (--count > 0) {
       uint8_t out = *(p + 1);
-      while (!(SPSR1 & _BV(SPIF))) ;
+      while (!(SPSR1 & _BV(SPIF1))) ;
       uint8_t in = SPDR1;
       SPDR1 = out;
       *p++ = in;
     }
-    while (!(SPSR1 & _BV(SPIF))) ;
+    while (!(SPSR1 & _BV(SPIF1))) ;
     *p = SPDR1;
 
 #endif
@@ -231,7 +231,7 @@ public:
 
   // After performing a group of transfers and releasing the chip select
   // signal, this function allows others to access the SPI bus
-  inline static void endTransaction(void) 
+  inline static void endTransaction(void)
   {
     #ifdef SPI_TRANSACTION_MISMATCH_LED
     if (!inTransactionFlag) {
@@ -263,11 +263,11 @@ public:
 
   // This function is deprecated.  New applications should use
   // beginTransaction() to configure SPI settings.
-  inline static void setBitOrder(uint8_t bitOrder) 
+  inline static void setBitOrder(uint8_t bitOrder)
 {
 #if defined(__AVR_ATmega328PB__)
-    if (bitOrder == LSBFIRST) SPCR1 |= _BV(DORD);
-    else SPCR1 &= ~(_BV(DORD));
+    if (bitOrder == LSBFIRST) SPCR1 |= _BV(DORD1);
+    else SPCR1 &= ~(_BV(DORD1));
 #endif
   }
 
@@ -276,8 +276,8 @@ public:
   // polls the hardware flag which is automatically cleared as the
   // AVR responds to SPI's interrupt
 #if defined(__AVR_ATmega328PB__)
-  inline static void attachInterrupt() { SPCR1 |= _BV(SPIE	); }
-  inline static void detachInterrupt() { SPCR1 &= ~_BV(SPIE); }
+  inline static void attachInterrupt() { SPCR1 |= _BV(SPIE1); }
+  inline static void detachInterrupt() { SPCR1 &= ~_BV(SPIE1); }
 #endif
 
 private:
