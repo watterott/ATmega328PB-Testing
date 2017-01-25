@@ -29,6 +29,14 @@
 * Differences between ATmega328/P and ATmega328PB: http://www.atmel.com/Images/Atmel-42559-Differences-between-ATmega328P-and-ATmega328PB_Application%20Note_AT15007.pdf
 
 
+## Known Issues
+ATmega328P and ATmega328PB have different thresholds for reset.
+This can be a problem when using a 5V power supply for the microcontroller and an USB serial adapter with 3.3V logic level on DTR.
+* Reset Input Threshold Voltage (read as 0/low):
+  * ATmega328P: 2.1V @ 5V
+  * ATmega328PB: 1.6V @ 5V
+
+
 ## History / Contributions
 * Patch v1.0.1 - Astrobeed, gpb01, PaoloP
 * avr-gcc 4.9.2 for linux64 - sabas1080
