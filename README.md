@@ -33,8 +33,8 @@
 ATmega328P and ATmega328PB have different thresholds for reset.
 This can be a problem when using a 5V power supply for the microcontroller and an USB serial adapter with 3.3V logic level on DTR.
 * Reset Input Threshold Voltage (read as 0/low):
-  * ATmega328P: 2.1V @ 5V
-  * ATmega328PB: 1.6V @ 5V
+  * ATmega328P: 2.1V @ Vcc=5V
+  * ATmega328PB: 1.6V @ Vcc=5V
 
 
 ## History / Contributions
