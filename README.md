@@ -9,16 +9,20 @@
 
 ### Installation on Arduino IDE 1.6.10+
 
-* The current avr-gcc toolchain (4.9.2-atmel3.5.3-arduino2) have not all files for the Atmega328PB:
+1. The current avr-gcc toolchain (4.9.2-atmel3.5.3-arduino2) has not all files for the Atmega328PB.
   So you have to update the files in ```/arduino/hardware``` with the [files from this repository under hardware](https://github.com/watterott/ATmega328PB-Testing/raw/master/hardware.zip).
-  When in the future all files are included with the toolchain then this step can be skipped.
 
-* Add the following URL to the Arduino Boards Manager (*File->Preferences*).
+  The directory is located under Windows in ```/Program Files(x86)/Arduino/hardware```
+  and under Mac in ```/Applications/Arduino/Contents/Java/hardware```
+
+  *When in the future all files are included with the toolchain then this step can be skipped.*
+
+2. Add the following URL to the Arduino Boards Manager (*File->Preferences*).
   ```
   https://github.com/watterott/ATmega328PB-Testing/raw/master/package_m328pb_index.json
   ```
 
-* Install the *ATmega328PB Boards* via the Boards Manager (*Tools->Boards->Boards Manager*).
+3. Install the *ATmega328PB Boards* via the Boards Manager (*Tools->Boards->Boards Manager*).
 
 
 ## Further Infos
