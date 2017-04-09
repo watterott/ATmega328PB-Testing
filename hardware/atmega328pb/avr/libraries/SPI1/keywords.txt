@@ -6,9 +6,7 @@
 # Datatypes (KEYWORD1)
 #######################################
 
-SPI	KEYWORD1
 SPI1	KEYWORD1
-
 
 #######################################
 # Methods and Functions (KEYWORD2)
@@ -20,7 +18,6 @@ setBitOrder	KEYWORD2
 setDataMode	KEYWORD2
 setClockDivider	KEYWORD2
 
-SPI1	KEYWORD2
 
 #######################################
 # Constants (LITERAL1)

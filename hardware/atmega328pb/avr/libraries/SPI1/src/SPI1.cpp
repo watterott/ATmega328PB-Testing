@@ -3,7 +3,6 @@
  * Copyright (c) 2014 by Paul Stoffregen <paul@pjrc.com> (Transaction API)
  * Copyright (c) 2014 by Matthijs Kooijman <matthijs@stdin.nl> (SPISettings AVR)
  * Copyright (c) 2014 by Andrew J. Kroll <xxxajk@gmail.com> (atomicity fixes)
- * Copyright (c) 2014 by Andre Moehl andre@ib-moehl.de (SPI1 Class, for ATmega328PB Support)
  * SPI Master library for arduino.
  *
  * This file is free software; you can redistribute it and/or modify
@@ -15,9 +14,6 @@
 #include "SPI1.h"
 
 SPI1Class SPI1;
-
-/* additional SPI1 Class ************************************************/
-#if defined(__AVR_ATmega328PB__)
 
 uint8_t SPI1Class::initialized = 0;
 uint8_t SPI1Class::interruptMode = 0;
@@ -32,29 +28,27 @@ void SPI1Class::begin()
   uint8_t sreg = SREG;
   noInterrupts(); // Protect from a scheduler and prevent transactionBegin
   if (!initialized) {
-    // Set SS1 to high so a connected chip will be "deselected" by default
+    // Set SS to high so a connected chip will be "deselected" by default
     uint8_t port = digitalPinToPort(SS1);
     uint8_t bit = digitalPinToBitMask(SS1);
     volatile uint8_t *reg = portModeRegister(port);
 
-    // if the SS1 pin is not already configured as an output
+    // if the SS pin is not already configured as an output
     // then set it high (to enable the internal pull-up resistor)
     if(!(*reg & bit)){
       digitalWrite(SS1, HIGH);
     }
 
-    // When the SS1 pin is set as OUTPUT, it can be used as
+    // When the SS pin is set as OUTPUT, it can be used as
     // a general purpose output port (it doesn't influence
     // SPI operations).
     pinMode(SS1, OUTPUT);
 
-    // Warning: if the SS1 pin ever becomes a LOW INPUT then SPI
+    // Warning: if the SS pin ever becomes a LOW INPUT then SPI
     // automatically switches to Slave, so the data direction of
-    // the SS1 pin MUST be kept as OUTPUT.
-#if defined(__AVR_ATmega328PB__)
-    SPCR1 |= _BV(MSTR1);
-    SPCR1 |= _BV(SPE1);
-#endif
+    // the SS pin MUST be kept as OUTPUT.
+    SPCR |= _BV(MSTR);
+    SPCR |= _BV(SPE);
 
     // Set direction register for SCK and MOSI pin.
     // MISO pin automatically overrides to INPUT.
@@ -69,19 +63,15 @@ void SPI1Class::begin()
   SREG = sreg;
 }
 
-void SPI1Class::end()
-{
+void SPI1Class::end() {
   uint8_t sreg = SREG;
   noInterrupts(); // Protect from a scheduler and prevent transactionBegin
   // Decrease the reference counter
   if (initialized)
     initialized--;
   // If there are no more references disable SPI
-  if (!initialized)
-  {
-#if defined(__AVR_ATmega328PB__)
-    SPCR0 &= ~_BV(SPE1);
-#endif
+  if (!initialized) {
+    SPCR &= ~_BV(SPE);
     interruptMode = 0;
     #ifdef SPI_TRANSACTION_MISMATCH_LED
     inTransactionFlag = 0;
@@ -90,17 +80,42 @@ void SPI1Class::end()
   SREG = sreg;
 }
 
-
-#ifdef INT0
-#define SPI_INT0_MASK  (1<<INT0)
+// mapping of interrupt numbers to bits within SPI_AVR_EIMSK
+#if defined(__AVR_ATmega32U4__)
+  #define SPI_INT0_MASK  (1<<INT0)
+  #define SPI_INT1_MASK  (1<<INT1)
+  #define SPI_INT2_MASK  (1<<INT2)
+  #define SPI_INT3_MASK  (1<<INT3)
+  #define SPI_INT4_MASK  (1<<INT6)
+#elif defined(__AVR_AT90USB646__) || defined(__AVR_AT90USB1286__)
+  #define SPI_INT0_MASK  (1<<INT0)
+  #define SPI_INT1_MASK  (1<<INT1)
+  #define SPI_INT2_MASK  (1<<INT2)
+  #define SPI_INT3_MASK  (1<<INT3)
+  #define SPI_INT4_MASK  (1<<INT4)
+  #define SPI_INT5_MASK  (1<<INT5)
+  #define SPI_INT6_MASK  (1<<INT6)
+  #define SPI_INT7_MASK  (1<<INT7)
+#elif defined(EICRA) && defined(EICRB) && defined(EIMSK)
+  #define SPI_INT0_MASK  (1<<INT4)
+  #define SPI_INT1_MASK  (1<<INT5)
+  #define SPI_INT2_MASK  (1<<INT0)
+  #define SPI_INT3_MASK  (1<<INT1)
+  #define SPI_INT4_MASK  (1<<INT2)
+  #define SPI_INT5_MASK  (1<<INT3)
+  #define SPI_INT6_MASK  (1<<INT6)
+  #define SPI_INT7_MASK  (1<<INT7)
+#else
+  #ifdef INT0
+  #define SPI_INT0_MASK  (1<<INT0)
+  #endif
+  #ifdef INT1
+  #define SPI_INT1_MASK  (1<<INT1)
+  #endif
+  #ifdef INT2
+  #define SPI_INT2_MASK  (1<<INT2)
+  #endif
 #endif
-#ifdef INT1
-#define SPI_INT1_MASK  (1<<INT1)
-#endif
-#ifdef INT2
-#define SPI_INT2_MASK  (1<<INT2)
-#endif
-
 
 void SPI1Class::usingInterrupt(uint8_t interruptNumber)
 {
@@ -184,8 +199,3 @@ void SPI1Class::notUsingInterrupt(uint8_t interruptNumber)
     interruptMode = 0;
   SREG = sreg;
 }
-
-#endif
-
-
-

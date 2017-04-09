@@ -14,12 +14,13 @@
 #ifndef _SPI_H_INCLUDED
 #define _SPI_H_INCLUDED
 
-#define SPCR _SFR_IO8(0x2C)
-#define SPSR _SFR_IO8(0x2D)
-#define SPDR _SFR_IO8(0x2E)
-
-#define SPI_STC_vect_num  17
-#define SPI_STC_vect      _VECTOR(17)  /* SPI Serial Transfer Complete */
+#ifndef SPCR
+ #define SPCR SPCR0
+ #define SPSR SPSR0
+ #define SPDR SPDR0
+ #define SPI_STC_vect_num SPI0_STC_vect_num
+ #define SPI_STC_vect SPI0_STC_vect
+#endif
 
 #include <Arduino.h>
 
