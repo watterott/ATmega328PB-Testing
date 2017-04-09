@@ -11,6 +11,19 @@
         {
           "name": "ATmega328PB Boards",
           "architecture": "avr",
+          "version": "1.0.9",
+          "category": "contributed",
+          "help": {"online": "https://github.com/watterott/ATmega328PB-Testing"},
+          "url": "https://github.com/watterott/ATmega328PB-Testing/raw/3398f67e81a0710cd61016fe135a485266dbd787/m328pb.zip",
+          "archiveFileName": "m328pb-1.0.9.zip",
+          "size": "85278",
+          "boards": [
+            {"name": "ATmega328PB"}
+          ]
+        },
+        {
+          "name": "ATmega328PB Boards",
+          "architecture": "avr",
           "version": "1.0.8",
           "category": "contributed",
           "help": {"online": "https://github.com/watterott/ATmega328PB-Testing"},
