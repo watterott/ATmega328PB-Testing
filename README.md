@@ -2,7 +2,7 @@
 
 ## Hardware
 * [Wattuino Pro Mini PB with ATmega328PB](http://www.watterott.com/en/Wattuino-pro-mini-PB-5V-16MHz)
-* [Atmel ATmega328PB Xplained Mini](http://www.watterott.com/en/Atmel-Xplained-Mini-Evalution-Kit)
+* [Atmel/Microchip ATmega328PB Xplained Mini](http://www.watterott.com/en/Atmel-Xplained-Mini-Evalution-Kit)
 
 
 ## Software
@@ -22,15 +22,17 @@
   https://github.com/watterott/ATmega328PB-Testing/raw/master/package_m328pb_index.json
   ```
 
-3. Install the *ATmega328PB Boards* via the Boards Manager (*Tools->Boards->Boards Manager*).
+3. Install the **ATmega328PB Boards** via the Boards Manager (*Tools->Boards->Boards Manager*).
 
 
 ## Further Infos
+* Differences between ATmega328/P and ATmega328PB: http://www.atmel.com/Images/Atmel-42559-Differences-between-ATmega328P-and-ATmega328PB_Application%20Note_AT15007.pdf
+
 * Another project/guide for the ATmega328PB: https://hackaday.io/project/9313-uino-mini-super-atmega328pb
 
-* Discussion in the Italian Arduino Forum: http://forum.arduino.cc/index.php?topic=374642.0
+* ATmega328PB Discussion in the Italian Arduino Forum: http://forum.arduino.cc/index.php?topic=374642.0
 
-* Differences between ATmega328/P and ATmega328PB: http://www.atmel.com/Images/Atmel-42559-Differences-between-ATmega328P-and-ATmega328PB_Application%20Note_AT15007.pdf
+* ATmega328PB Support Request on GitHub: https://github.com/arduino/toolchain-avr/issues/36
 
 
 ## Known Issues
