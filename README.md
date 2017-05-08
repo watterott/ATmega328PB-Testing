@@ -7,7 +7,7 @@
 
 ## Software
 
-### Installation on Arduino IDE 1.6.10+
+### Installation on Arduino IDE 1.8+
 
 1. The current avr-gcc toolchain (4.9.2-atmel3.5.3-arduino2) has not all files for the Atmega328PB.
   So you have to update the files in ```/arduino/hardware``` with the [files from this repository under hardware](https://github.com/watterott/ATmega328PB-Testing/raw/master/hardware.zip).
