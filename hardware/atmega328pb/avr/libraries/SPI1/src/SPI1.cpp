@@ -47,8 +47,8 @@ void SPI1Class::begin()
     // Warning: if the SS pin ever becomes a LOW INPUT then SPI
     // automatically switches to Slave, so the data direction of
     // the SS pin MUST be kept as OUTPUT.
-    SPCR |= _BV(MSTR);
-    SPCR |= _BV(SPE);
+    SPCR1 |= _BV(MSTR);
+    SPCR1 |= _BV(SPE);
 
     // Set direction register for SCK and MOSI pin.
     // MISO pin automatically overrides to INPUT.
@@ -71,7 +71,7 @@ void SPI1Class::end() {
     initialized--;
   // If there are no more references disable SPI
   if (!initialized) {
-    SPCR &= ~_BV(SPE);
+    SPCR1 &= ~_BV(SPE);
     interruptMode = 0;
     #ifdef SPI_TRANSACTION_MISMATCH_LED
     inTransactionFlag = 0;
