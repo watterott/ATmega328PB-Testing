@@ -1,7 +1,7 @@
 
 menu.speed=Speed
 
-atmega328pbcc.name=Atmel ATmega328PB Crystal Clock
+atmega328pbcc.name=ATmega328PB Crystal Clock
 atmega328pbcc.bootloader.file=optiboot_m328pb.hex
 atmega328pbcc.bootloader.unlock_bits=0xFF
 atmega328pbcc.bootloader.lock_bits=0xCF
@@ -30,7 +30,7 @@ atmega328pbcc.menu.speed.1mhz.build.f_cpu=1000000L
 atmega328pbcc.menu.speed.20mhz=20 MHz
 atmega328pbcc.menu.speed.20mhz.build.f_cpu=20000000L
 
-atmega328pbec.name=Atmel ATmega328PB External Clock
+atmega328pbec.name=ATmega328PB External Clock
 atmega328pbec.bootloader.file=optiboot_m328pb.hex
 atmega328pbec.bootloader.unlock_bits=0xFF
 atmega328pbec.bootloader.lock_bits=0xCF
@@ -59,7 +59,7 @@ atmega328pbec.menu.speed.1mhz.build.f_cpu=1000000L
 atmega328pbec.menu.speed.20mhz=20 MHz
 atmega328pbec.menu.speed.20mhz.build.f_cpu=20000000L
 
-atmega328pbic.name=Atmel ATmega328PB Internal Clock
+atmega328pbic.name=ATmega328PB Internal Clock
 atmega328pbic.bootloader.file=optiboot_m328pb.hex
 atmega328pbic.bootloader.unlock_bits=0xFF
 atmega328pbic.bootloader.lock_bits=0xCF
