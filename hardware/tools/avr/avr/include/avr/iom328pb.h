@@ -554,6 +554,8 @@
 #define ADC3D   3
 #define ADC4D   4
 #define ADC5D   5
+#define ADC6D   6
+#define ADC7D   7
 
 #define DIDR1   _SFR_MEM8(0x7F)
 #define AIN0D   0
