@@ -10,7 +10,7 @@
 
 ### Installation on Arduino IDE 1.8+
 
-1. The current avr-gcc toolchain (4.9.2-atmel3.5.3-arduino2) has not all files for the Atmega328PB.
+1. The current avr-gcc toolchain (4.9.2-atmel3.5.4) has not all files for the Atmega328PB.
   So you have to update the files in ```/arduino/hardware``` with the [files from this repository under hardware](https://github.com/watterott/ATmega328PB-Testing/raw/master/hardware.zip).
 
   The directory is located under Windows in ```/Program Files(x86)/Arduino/hardware```
