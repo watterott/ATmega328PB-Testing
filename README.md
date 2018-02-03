@@ -10,8 +10,8 @@
 
 ### Installation on Arduino IDE 1.8+
 
-1. The Arduino AVR-GCC Toolchain (5.4.0-atmel3.6.0) supports the Atmega328PB.
-   Further infos [here](https://github.com/arduino/toolchain-avr/pull/47).
+1. The Arduino **AVR-GCC Toolchain (5.4.0-atmel3.6)** supports the Atmega328PB.
+   Further infos [here](https://github.com/arduino/toolchain-avr/pull/47) (Arduino AVR Boards v1.6.200).
 
 2. Add the following URL to the Arduino Boards Manager (*File->Preferences*).
    ```
