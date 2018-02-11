@@ -201,7 +201,7 @@ const uint8_t PROGMEM digital_pin_to_bit_mask_PGM[] = {
 };
 
 const uint8_t PROGMEM digital_pin_to_timer_PGM[] = {
-#if defined(AVR_ATmega328PB)
+#if defined(__AVR_ATmega328PB__)
 	TIMER3A,        /* 0 - port D */
 	TIMER4A,
 	TIMER4B, // TIMER3B or TIMER4B
