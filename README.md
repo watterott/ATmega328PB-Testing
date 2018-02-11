@@ -30,11 +30,20 @@
 
 
 ## Known Issues
+
+### Timer 3+4 Output Compare
+The output compare will only work if a 1 or 0 is written to the port register depending on the modulation.
+Futher infos here: http://www.avrfreaks.net/comment/1717946#comment-1717946
+
+### Reset
 ATmega328P and ATmega328PB have different thresholds for reset.
 This can be a problem when using a 5V power supply for the microcontroller and an USB serial adapter with 3.3V logic level on DTR.
 * Reset Input Threshold Voltage (read as 0/low):
   * ATmega328P: 2.1V @ Vcc=5V
   * ATmega328PB: 1.6V @ Vcc=5V
+
+### Crystal Oscillator
+The ATmega328PB has no full-swing option for the oscillator.
 
 
 ## History / Contributions
