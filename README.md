@@ -10,18 +10,20 @@
 
 ### Installation on Arduino IDE 1.8+
 
-1. The Arduino **AVR-GCC Toolchain (5.4.0-atmel3.6)** supports the Atmega328PB.
-   Further infos [here](https://github.com/arduino/toolchain-avr/pull/47) (Arduino AVR Boards v1.6.200).
-
-2. Add the following URL to the Arduino Boards Manager (*File->Preferences*).
+1. Add the following URLs to the Arduino Boards Manager (*File->Preferences*).
    ```
+   https://downloads.arduino.cc/packages/package_avr_3.6.0_index.json
    https://github.com/watterott/ATmega328PB-Testing/raw/master/package_m328pb_index.json
    ```
+
+2. Update the **Arduino AVR Boards** to version **1.6.206** via the Boards Manager (*Tools->Boards->Boards Manager*).
 
 3. Install the **ATmega328PB Boards** via the Boards Manager (*Tools->Boards->Boards Manager*).
 
 
 ## Further Infos
+* Arduino AVR-GCC Toolchain with Atmega328PB support: https://github.com/arduino/toolchain-avr/pull/47
+
 * Differences between ATmega328/P and ATmega328PB: http://www.atmel.com/Images/Atmel-42559-Differences-between-ATmega328P-and-ATmega328PB_Application%20Note_AT15007.pdf
 
 * Another project/guide for the ATmega328PB: https://hackaday.io/project/9313-uino-mini-super-atmega328pb
