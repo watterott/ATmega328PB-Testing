@@ -35,7 +35,7 @@
 
 ### Timer 3+4 Output Compare
 The output compare will only work if a 1 or 0 is written to the port register depending on the modulation.
-Futher infos here: http://www.avrfreaks.net/comment/1717946#comment-1717946
+Futher infos here: http://www.avrfreaks.net/comment/1717946#comment-1717946 and https://github.com/watterott/ATmega328PB-Testing/issues/29
 
 ### Reset
 ATmega328P and ATmega328PB have different thresholds for reset.
