@@ -24,7 +24,6 @@
 
 #include <inttypes.h>
 #include "Stream.h"
-#include "twi_Def.h"
 
 #define BUFFER_LENGTH 32
 
