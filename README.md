@@ -16,7 +16,7 @@
    https://github.com/watterott/ATmega328PB-Testing/raw/master/package_m328pb_index.json
    ```
 
-2. Update the **Arduino AVR Boards** to version **1.6.206** via the Boards Manager (*Tools->Boards->Boards Manager*).
+2. Update the **Arduino AVR Boards** to version **1.6.207** via the Boards Manager (*Tools->Boards->Boards Manager*).
 
 3. Install the **ATmega328PB Boards** via the Boards Manager (*Tools->Boards->Boards Manager*).
 
