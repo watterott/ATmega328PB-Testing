@@ -21,7 +21,7 @@
 #define twi_h
 
   #include <inttypes.h>
-  #include <twi_def.h>
+  #include "twi_def.h"
 
   //#define ATMEGA8
 
