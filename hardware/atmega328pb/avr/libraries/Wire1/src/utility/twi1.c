@@ -26,6 +26,8 @@
 #include <avr/interrupt.h>
 #include <compat/twi.h>
 #include "Arduino.h" // for digitalWrite
+#include "pins_arduino.h"
+#include "twi1.h"
 
 #ifndef cbi
 #define cbi(sfr, bit) (_SFR_BYTE(sfr) &= ~_BV(bit))
@@ -34,9 +36,6 @@
 #ifndef sbi
 #define sbi(sfr, bit) (_SFR_BYTE(sfr) |= _BV(bit))
 #endif
-
-#include "pins_arduino.h"
-#include "twi1.h"
 
 static volatile uint8_t twi_state;
 static volatile uint8_t twi_slarw;
