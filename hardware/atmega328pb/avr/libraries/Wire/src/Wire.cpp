@@ -24,7 +24,6 @@ extern "C" {
   #include <string.h>
   #include <inttypes.h>
   #include "utility/twi.h"
-  #include "utility/twi_def.h"
 }
 
 #include "Wire.h"

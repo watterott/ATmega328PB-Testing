@@ -22,6 +22,17 @@
 
   #include <inttypes.h>
 
+  #ifndef TWBR
+  #define TWBR         TWBR0         //_SFR_MEM8(0xB8)
+  #define TWSR         TWSR0         //_SFR_MEM8(0xB9)
+  #define TWAR         TWAR0         //_SFR_MEM8(0xBA)
+  #define TWDR         TWDR0         //_SFR_MEM8(0xBB)
+  #define TWCR         TWCR0         //_SFR_MEM8(0xBC)
+  #define TWAMR        TWAMR0        //_SFR_MEM8(0xBD)
+  #define TWI_vect_num TWI0_vect_num //24
+  #define TWI_vect     TWI0_vect     //_VECTOR(24)
+  #endif
+
   #ifndef TWI_FREQ
   #define TWI_FREQ 100000L
   #endif
