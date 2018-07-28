@@ -2,7 +2,7 @@
   "packages": [
     {
       "name": "m328pb",
-      "maintainer": "ATmega328PB",
+      "maintainer": "Watterott electronic",
       "websiteURL": "https://github.com/watterott/ATmega328PB-Testing",
       "email": "",
       "help": {"online": "https://github.com/watterott/ATmega328PB-Testing"},
