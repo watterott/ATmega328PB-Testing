@@ -29,6 +29,8 @@
 
 * ATmega328PB Discussion in the Italian Arduino Forum: http://forum.arduino.cc/index.php?topic=374642.0
 
+* Optiboot for ATmega328PB: https://github.com/watterott/Wattuino/tree/master/software/Optiboot#optiboot
+
 
 ## Known Issues
 
