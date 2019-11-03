@@ -2,8 +2,8 @@
 
 
 ## Hardware
-* [Wattuino Pro Mini PB 5V 16MHz (with ATmega328PB)](http://www.watterott.com/en/Wattuino-pro-mini-PB-5V-16MHz)
-* [Wattuino Pro Mini PB 3.3V 8MHz (with ATmega328PB)](http://www.watterott.com/en/Wattuino-pro-mini-PB-3V3-8MHz)
+* [Wattuino Pro Mini PB 5V 16MHz (with ATmega328PB)](https://shop.watterott.com/Wattuino-Pro-Mini-PB-5V-16MHz-ATmega328PB_1)
+* [Wattuino Pro Mini PB 3.3V 8MHz (with ATmega328PB)](https://shop.watterott.com/Wattuino-Pro-Mini-PB-33V-8MHz-ATmega328PB_1)
 
 
 ## Software
