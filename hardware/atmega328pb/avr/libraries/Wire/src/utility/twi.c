@@ -399,16 +399,16 @@ ISR(TWI_vect)
         TWDR = twi_masterBuffer[twi_masterBufferIndex++];
         twi_reply(1);
       }else{
-	if (twi_sendStop)
+        if (twi_sendStop)
           twi_stop();
-	else {
-	  twi_inRepStart = true;	// we're gonna send the START
-	  // don't enable the interrupt. We'll generate the start, but we 
-	  // avoid handling the interrupt until we're in the next transaction,
-	  // at the point where we would normally issue the start.
-	  TWCR = _BV(TWINT) | _BV(TWSTA)| _BV(TWEN) ;
-	  twi_state = TWI_READY;
-	}
+        else {
+          twi_inRepStart = true;	// we're gonna send the START
+          // don't enable the interrupt. We'll generate the start, but we 
+          // avoid handling the interrupt until we're in the next transaction,
+          // at the point where we would normally issue the start.
+          TWCR = _BV(TWINT) | _BV(TWSTA)| _BV(TWEN) ;
+          twi_state = TWI_READY;
+        }
       }
       break;
     case TW_MT_SLA_NACK:  // address sent, nack received
@@ -439,17 +439,17 @@ ISR(TWI_vect)
     case TW_MR_DATA_NACK: // data received, nack sent
       // put final byte into buffer
       twi_masterBuffer[twi_masterBufferIndex++] = TWDR;
-	if (twi_sendStop)
-          twi_stop();
-	else {
-	  twi_inRepStart = true;	// we're gonna send the START
-	  // don't enable the interrupt. We'll generate the start, but we 
-	  // avoid handling the interrupt until we're in the next transaction,
-	  // at the point where we would normally issue the start.
-	  TWCR = _BV(TWINT) | _BV(TWSTA)| _BV(TWEN) ;
-	  twi_state = TWI_READY;
-	}    
-	break;
+      if (twi_sendStop)
+        twi_stop();
+      else {
+        twi_inRepStart = true;	// we're gonna send the START
+        // don't enable the interrupt. We'll generate the start, but we 
+        // avoid handling the interrupt until we're in the next transaction,
+        // at the point where we would normally issue the start.
+        TWCR = _BV(TWINT) | _BV(TWSTA)| _BV(TWEN) ;
+        twi_state = TWI_READY;
+      }    
+      break;
     case TW_MR_SLA_NACK: // address sent, nack received
       twi_stop();
       break;

@@ -102,7 +102,7 @@ uint8_t TwoWire::requestFrom(uint8_t address, uint8_t quantity, uint32_t iaddres
   // write internal register address - most significant byte first
   while (isize-- > 0)
     write((uint8_t)(iaddress >> (isize*8)));
-  endTransmission(false);
+    endTransmission(false);
   }
 
   // clamp to buffer length

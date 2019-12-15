@@ -381,8 +381,7 @@ void twi_releaseBus1(void)
 
 ISR(TWI1_vect)
 {
-	// #define TW_STATUS		(TWSR & TW_STATUS_MASK)
-	switch(TWSR1 & TW_STATUS_MASK){
+	switch(TWSR1 & TW_STATUS_MASK){ // #define TW_STATUS (TWSR & TW_STATUS_MASK)
     // All Master
     case TW_START:     // sent start condition
     case TW_REP_START: // sent repeated start condition
@@ -400,16 +399,16 @@ ISR(TWI1_vect)
         TWDR1 = twi_masterBuffer[twi_masterBufferIndex++];
         twi_reply1(1);
       }else{
-	if (twi_sendStop)
+        if (twi_sendStop)
           twi_stop1();
-	else {
-	  twi_inRepStart = true;	// we're gonna send the START
-	  // don't enable the interrupt. We'll generate the start, but we 
-	  // avoid handling the interrupt until we're in the next transaction,
-	  // at the point where we would normally issue the start.
-	  TWCR1 = _BV(TWINT) | _BV(TWSTA)| _BV(TWEN) ;
-	  twi_state = TWI_READY;
-	}
+        else {
+          twi_inRepStart = true;	// we're gonna send the START
+          // don't enable the interrupt. We'll generate the start, but we 
+          // avoid handling the interrupt until we're in the next transaction,
+          // at the point where we would normally issue the start.
+          TWCR1 = _BV(TWINT) | _BV(TWSTA)| _BV(TWEN) ;
+          twi_state = TWI_READY;
+        }
       }
       break;
     case TW_MT_SLA_NACK:  // address sent, nack received
@@ -440,17 +439,17 @@ ISR(TWI1_vect)
     case TW_MR_DATA_NACK: // data received, nack sent
       // put final byte into buffer
       twi_masterBuffer[twi_masterBufferIndex++] = TWDR1;
-	if (twi_sendStop)
-          twi_stop1();
-	else {
-	  twi_inRepStart = true;	// we're gonna send the START
-	  // don't enable the interrupt. We'll generate the start, but we 
-	  // avoid handling the interrupt until we're in the next transaction,
-	  // at the point where we would normally issue the start.
-	  TWCR1 = _BV(TWINT) | _BV(TWSTA)| _BV(TWEN) ;
-	  twi_state = TWI_READY;
-	}    
-	break;
+      if (twi_sendStop)
+        twi_stop1();
+      else {
+        twi_inRepStart = true;	// we're gonna send the START
+        // don't enable the interrupt. We'll generate the start, but we 
+        // avoid handling the interrupt until we're in the next transaction,
+        // at the point where we would normally issue the start.
+        TWCR1 = _BV(TWINT) | _BV(TWSTA)| _BV(TWEN) ;
+        twi_state = TWI_READY;
+      }    
+      break;
     case TW_MR_SLA_NACK: // address sent, nack received
       twi_stop1();
       break;
