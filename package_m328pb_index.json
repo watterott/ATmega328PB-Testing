@@ -43,6 +43,7 @@
           "help": {"online": "https://github.com/watterott/ATmega328PB-Testing"},
           "url": "https://github.com/watterott/ATmega328PB-Testing/raw/12b422f551b8cdf0b998ee1a6a648df8320c8f6e/m328pb.zip",
           "archiveFileName": "m328pb-1.1.2.zip",
+          "checksum": "SHA-256:0d8cae9cb8224c3b8a7c8c73eb2a75efae82dca5c36983c300bd1e78a29d3256", 
           "size": "84842",
           "boards": [
             {"name": "ATmega328PB"}
@@ -56,6 +57,7 @@
           "help": {"online": "https://github.com/watterott/ATmega328PB-Testing"},
           "url": "https://github.com/watterott/ATmega328PB-Testing/raw/3354860a5ff5f1c920b957cee8d1cd9d08e75bc7/m328pb.zip",
           "archiveFileName": "m328pb-1.1.1.zip",
+          "checksum": "SHA-256:802d9d2d206be2b0c32be0b4b24ea8772274857e27a5284f2c62bf94031addf0",
           "size": "85206",
           "boards": [
             {"name": "ATmega328PB"}
@@ -69,6 +71,7 @@
           "help": {"online": "https://github.com/watterott/ATmega328PB-Testing"},
           "url": "https://github.com/watterott/ATmega328PB-Testing/raw/88ea09054b3260f3b4ff855cadd84df39e65ef85/m328pb.zip",
           "archiveFileName": "m328pb-1.1.0.zip",
+          "checksum": "SHA-256:2931223b261bec9d177b09ca629f1742089ee78184ffcfc059a86ed4270e9447",
           "size": "85215",
           "boards": [
             {"name": "ATmega328PB"}
@@ -82,6 +85,7 @@
           "help": {"online": "https://github.com/watterott/ATmega328PB-Testing"},
           "url": "https://github.com/watterott/ATmega328PB-Testing/raw/3398f67e81a0710cd61016fe135a485266dbd787/m328pb.zip",
           "archiveFileName": "m328pb-1.0.9.zip",
+          "checksum": "SHA-256:414fa5a5fce6f4f2a2cd63e56ce46957d124ed9db14badcd30a5ad841624b910",
           "size": "85278",
           "boards": [
             {"name": "ATmega328PB"}
@@ -95,6 +99,7 @@
           "help": {"online": "https://github.com/watterott/ATmega328PB-Testing"},
           "url": "https://github.com/watterott/ATmega328PB-Testing/raw/4ce95b1711efa12aa6a874421739cf5be08cf6bb/m328pb.zip",
           "archiveFileName": "m328pb-1.0.8.zip",
+          "checksum": "SHA-256:7a141693d347d747cb175171edfd7e731db75be1da2b8689c5c69fa879bacdd2",
           "size": "85517",
           "boards": [
             {"name": "ATmega328PB"}
@@ -108,6 +113,7 @@
           "help": {"online": "https://github.com/watterott/ATmega328PB-Testing"},
           "url": "https://github.com/watterott/ATmega328PB-Testing/raw/db85f07b07a3d807c6b0d765819b18492a1b0bd3/m328pb.zip",
           "archiveFileName": "m328pb-1.0.7.zip",
+          "checksum": "SHA-256:a0dad34884e3ef4d5bb828c233b19e3ee3307b5120d2bfb50bf97b7d2b2dc667",
           "size": "85517",
           "boards": [
             {"name": "ATmega328PB"}
@@ -121,6 +127,7 @@
           "help": {"online": "https://github.com/watterott/ATmega328PB-Testing"},
           "url": "https://github.com/watterott/ATmega328PB-Testing/raw/ee59a8487cbc1efd69e08f4c005594f7042cb342/m328pb.zip",
           "archiveFileName": "m328pb-1.0.6.zip",
+          "checksum": "SHA-256:c6f4aabc902ccb1b87c98bf06fdee8a80ee19667f426a5bc977a7abde8f0e3e4",
           "size": "85517",
           "boards": [
             {"name": "ATmega328PB"}
@@ -141,6 +148,7 @@
           "help": {"online": "https://github.com/watterott/ATmega328PB-Testing"},
           "url": "https://github.com/watterott/ATmega328PB-Testing/raw/d90f0697c5a24553a96ad41cb2605edba7057a75/m328pb.zip",
           "archiveFileName": "m328pb-1.0.5.zip",
+          "checksum": "SHA-256:cf9be8404e4cf1d247d036f9781306f82d25c7195c2d6bee6d30f4ea502e0a2e",
           "size": "85567",
           "boards": [
             {"name": "ATmega328PB"}
@@ -161,6 +169,7 @@
           "help": {"online": "https://github.com/watterott/ATmega328PB-Testing"},
           "url": "https://github.com/watterott/ATmega328PB-Testing/raw/8fc3888eaa5c0dc8e715ac47b3a9d33f7657dda6/m328pb.zip",
           "archiveFileName": "m328pb-1.0.4.zip",
+          "checksum": "SHA-256:bcb06cdbd89e003dcbbd8646c9325b8429a9a7dc9868e0416f76d2d580ba43f5",
           "size": "84449",
           "boards": [
             {"name": "ATmega328PB"}
@@ -181,6 +190,7 @@
           "help": {"online": "https://github.com/watterott/ATmega328PB-Testing"},
           "url": "https://github.com/watterott/ATmega328PB-Testing/raw/49211563cb515c8924eb91fa7e393652062da989/m328pb.zip",
           "archiveFileName": "m328pb-1.0.3.zip",
+          "checksum": "SHA-256:204cf2e9d3885a9690459d6d716e867ded5ee756e5e182136af8a21956c1427f",
           "size": "53995",
           "boards": [
             {"name": "ATmega328PB"}
@@ -194,6 +204,7 @@
           "help": {"online": "https://github.com/watterott/ATmega328PB-Testing"},
           "url": "https://github.com/watterott/ATmega328PB-Testing/raw/610a28ee8b438d05bab3f2e71b701fa6958fb4c3/m328pb.zip",
           "archiveFileName": "m328pb-1.0.2.zip",
+          "checksum": "SHA-256:c2cb5352941f76a49ee9d40d41ab1060c4e9ab5706b046a0ba70b25fc0cadb3f",
           "size": "53826",
           "boards": [
             {"name": "ATmega328PB"}
@@ -219,6 +230,7 @@
           "help": {"online": "https://github.com/watterott/ATmega328PB-Testing"},
           "url": "https://github.com/watterott/ATmega328PB-Testing/raw/610a28ee8b438d05bab3f2e71b701fa6958fb4c3/m328pb.zip",
           "archiveFileName": "m328pb-1.0.1.zip",
+          "checksum": "SHA-256:c2cb5352941f76a49ee9d40d41ab1060c4e9ab5706b046a0ba70b25fc0cadb3f",
           "size": "53826",
           "boards": [
             {"name": "ATmega328PB"}
@@ -244,6 +256,7 @@
           "help": {"online": "https://github.com/watterott/ATmega328PB-Testing"},
           "url": "https://github.com/watterott/ATmega328PB-Testing/raw/610a28ee8b438d05bab3f2e71b701fa6958fb4c3/m328pb.zip",
           "archiveFileName": "m328pb-1.0.0.zip",
+          "checksum": "SHA-256:c2cb5352941f76a49ee9d40d41ab1060c4e9ab5706b046a0ba70b25fc0cadb3f",
           "size": "53826",
           "boards": [
             {"name": "ATmega328PB"}
