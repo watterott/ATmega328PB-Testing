@@ -16,6 +16,7 @@
           "help": {"online": "https://github.com/watterott/ATmega328PB-Testing"},
           "url": "https://github.com/watterott/ATmega328PB-Testing/raw/master/m328pb.zip",
           "archiveFileName": "m328pb-1.1.4.zip",
+          "checksum": "SHA-256:96d7afc7b31c6a58a9dccb967ad044d845374ced130a029f2820574328b73fa5",
           "size": "84570",
           "boards": [
             {"name": "ATmega328PB"}
